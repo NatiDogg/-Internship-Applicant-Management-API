@@ -1,7 +1,8 @@
 import {z} from 'zod'
 
 const envSchema = z.object({
-     DATABASE_URL: z.string().min(5)
+     DATABASE_URL: z.string().min(5),
+     JWT_ACCESS_SECRET_KEY: z.string().min(5)
 })
 
 export function validate(config: Record<string,unknown>){

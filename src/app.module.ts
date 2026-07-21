@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { ConfigModule } from '@nestjs/config';
 import { validate } from './utils/envValidation';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { validate } from './utils/envValidation';
       isGlobal: true,
       validate
     }),
-    PrismaModule],
+    PrismaModule,
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
