@@ -9,11 +9,11 @@ export class JwtTokenService{
 
      createAccessToken(userPayload:{id: string, name: string, email: string}){
 
-      return jwt.sign(userPayload,this.configService.getOrThrow<string>('JWT_ACCESS_KEY_SECRET'),{expiresIn: '30m'})
+      return jwt.sign(userPayload,this.configService.getOrThrow<string>('JWT_ACCESS_SECRET_KEY'),{expiresIn: '30m'})
 
      }
      verifyAccessToken(token: string){
-      return jwt.verify(token,this.configService.getOrThrow<string>('JWT_ACCESS_KEY_SECRET')) as {id: string, name: string, email: string}
+      return jwt.verify(token,this.configService.getOrThrow<string>('JWT_ACCESS_SECRET_KEY')) as {id: string, name: string, email: string}
 
      }
 
