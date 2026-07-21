@@ -1,0 +1,27 @@
+model Applicant{
+    id String @id @default(uuid())
+    name String
+    email String @unique
+    phone String?
+    status ApplicationStatus @default(PENDING)
+    track InternshipTrack
+    notes String?
+    deletedAt DateTime?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    
+}
+
+enum ApplicationStatus {
+    PENDING
+    SHORTLISTED
+    ACCEPTED
+    REJECTED
+}
+enum InternshipTrack {
+  FRONTEND_DEVELOPMENT
+  BACKEND_DEVELOPMENT
+  MOBILE_DEVELOPMENT
+  UI_UX_DESIGN
+  DATA_ANALYTICS
+}
