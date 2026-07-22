@@ -6,7 +6,7 @@ import { QueryApplicantDto } from './dtos/queryApplicantDto';
 import { UpdateApplicantDto } from './dtos/updateApplicantDto';
 import { UpdateStatusDto } from './dtos/updateStatusDto';
 import { UpdateNotesDto } from './dtos/updateNotesDto';
-import { success } from 'zod';
+
 
 @Injectable()
 export class ApplicantService {
