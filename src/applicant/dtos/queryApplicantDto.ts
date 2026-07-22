@@ -16,7 +16,7 @@ export class QueryApplicantDto {
   @Type(() => Number)
   @IsInt()
   @Min(1)
-  limit?: number = 10;
+  limit?: number = 5;
 
   @ApiPropertyOptional({ example: 'Abebe', description: 'Search term for name or email' })
   @IsOptional()
