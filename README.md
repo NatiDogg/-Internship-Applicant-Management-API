@@ -66,17 +66,20 @@ Interactive OpenAPI / Swagger UI documentation is built in and accessible at:  h
 
 ## Architecture Overview
 
+```text
 src/
-├── auth/                 # JWT strategy, guards, and Auth Controller/Service
-│   ├── dto/              # Auth request validation schemas
-│   ├── guards/           # JwtAuthGuard
-│   └── strategies/       # Passport JWT Strategy
+├── auth/                 # JWT strategy, guards, and Auth Controller & Service
+│   ├── dto/              # Request validation schemas (e.g., LoginDto)
+│   ├── guards/           # JwtAuthGuard implementation
+│   └── strategies/       # Passport JWT strategy configuration
+│
 ├── applicants/           # Applicants resource module
-│   ├── dto/              # Create/Update/Status/Notes DTOs
+│   ├── dto/              # Create/Update/Status/Notes validation DTOs
 │   ├── applicants.controller.ts
 │   └── applicants.service.ts
-├── dashboard/            # Admin analytics & summary statistics
-├── prisma/               # Custom Prisma Service wrapper & module
+│
+├── dashboard/            # Admin analytics & summary statistics module
+├── prisma/               # Custom Prisma Service wrapper & connection setup
 └── utils/                # Bcrypt password hashing utilities
 
 
