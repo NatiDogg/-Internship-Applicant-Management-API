@@ -56,6 +56,9 @@ Ensure you have the following installed on your machine:
     # Production build
        npm run build
        npm run start:prod
+5. **Testing the Application:** 
+    # Run unit tests
+       npx jest src/auth/auth.service.spec.ts src/applicant/applicant.service.spec.ts
 
 
 Once running, the server listens at: http://localhost:3000/api
