@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { validate } from './utils/envValidation';
 import { AuthModule } from './auth/auth.module';
 import { ApplicantModule } from './applicant/applicant.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { ApplicantModule } from './applicant/applicant.module';
     }),
     PrismaModule,
     AuthModule,
-    ApplicantModule],
+    ApplicantModule,
+    DashboardModule],
   controllers: [AppController],
   providers: [AppService],
 })
