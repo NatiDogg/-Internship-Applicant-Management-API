@@ -82,10 +82,10 @@ src/
 ├── prisma/               # Custom Prisma Service wrapper & connection setup
 └── utils/                # Bcrypt password hashing utilities
 
+```
 
 ## Endpoint Summary
 
-## 🔗 Endpoint Summary
 
 <table>
   <thead>
